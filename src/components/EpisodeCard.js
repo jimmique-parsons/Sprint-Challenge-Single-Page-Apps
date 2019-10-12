@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Button } from "semantic-ui-react";
 import styled from 'styled-components';
 
 const Card = styled.div`
@@ -9,17 +9,18 @@ const Card = styled.div`
     border-radius: 5px;
     width: 14%;
 `;
- 	
-export default function LocationCard ({ name, type, dimension, residents }) {
+
+ export default function EpisodeCard({ name, air_date, episode, characters }) {
   return (
     <Card>
       <Card.Content>
         <Card.Header>{name}</Card.Header>
-        <Card.Description>{type} - {dimension}</Card.Description>
+        <Card.Meta>{air_date}</Card.Meta>
+        <Card.Description>{episode}</Card.Description>
         <Card.Content extra>
           <div className="ui one buttons">
             <Button>
-              {residents.length} residents
+              {characters.length} characters
             </Button>
           </div>
         </Card.Content>
