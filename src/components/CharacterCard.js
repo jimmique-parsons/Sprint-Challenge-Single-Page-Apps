@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, Icon, Image } from "semantic-ui-react";
+import styled from 'styled-components';
+
+const Card = styled.div`
+    background: rgba(33, 33, 33, 0.6);
+    padding: 1% 2%;
+    margin: 10px;
+    border-radius: 5px;
+    width: 14%;
+`;
 
 export default function CharacterCard({ character }) {
   console.log(character)
