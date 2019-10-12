@@ -24,6 +24,26 @@ const panes = [
       ),
       render: () => <Tab.Pane><AppRouter /></Tab.Pane>
     },
+    { menuItem: (
+        <Menu.Item key='locations'>
+          <NavLink to="/locations">
+            <Icon name='map outline' />
+            Locations
+          </NavLink>
+        </Menu.Item>
+      ),
+      render: () => <Tab.Pane><AppRouter /></Tab.Pane>
+    },
+    { menuItem: (
+        <Menu.Item key='episodes'>
+          <NavLink to="/episodes">
+            <Icon name='video camera' />
+            Episodes
+          </NavLink>
+        </Menu.Item>
+      ),
+      render: () => <Tab.Pane><AppRouter /></Tab.Pane>
+    }
   ];
   
    export default function TabNav() {

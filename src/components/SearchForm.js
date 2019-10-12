@@ -4,6 +4,8 @@ import axios from "axios";
 export default function SearchForm({
   place,
   setCharacters,
+  setLocations,
+  setEpisodes,
   setNext,
   page
 }) {
@@ -25,6 +27,8 @@ export default function SearchForm({
         .then(res => {
           console.log(res.data);
           if (place === "character") setCharacters(res.data.results);
+          else if (place === "location") setLocations(res.data.results);
+          else if (place === "episode") setEpisodes(res.data.results);
 
            setNext(res.data.info.next);
         })
